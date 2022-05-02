@@ -1,0 +1,5 @@
+numpy
+re
+sys
+networkx
+nltk
