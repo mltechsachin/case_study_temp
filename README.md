@@ -9,7 +9,7 @@
 python extractive_text_sm.py text.txt <num_sen>
 ```
 
-where the text.txt contains sentences of the text document, all in one line and <num_sen> specifies number of sentences in the summary.
+where the text.txt contains sentences of the text document, all in one line and <num_sen> specifies number of sentences in the summary (3 by default).
 
 ## Requirements for running the script:
 1. Python 3
