@@ -16,3 +16,8 @@ where the text.txt contains sentences of the text document, all in one line and 
 2. Python packages: numpy, re, sys, nltk, networkx
 3. text file with all sentences on one line
 
+## The requirements can be installed with
+```
+pip3 install -r requirements.txt
+```
+where the requirements.txt contains line seperates names of packages specified in point 2.
