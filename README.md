@@ -1,7 +1,7 @@
 
 
 # Extractive Text Summarization
-## It contains the code to do extractive text summarization using the scores obtain by pagerank on the pairwise similarities between sentences.
+## It contains the code to do extractive text summarization using the scores obtain by pagerank on the pairwise similarities between sentences. (Although there are many other approaches to follow)
 
 
 ## Running the script
