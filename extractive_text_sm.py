@@ -1,14 +1,11 @@
 #!/usr/bin/python
 #importing the necessary packages
-
-from nltk.corpus import stopwords
-from nltk.cluster.util import cosine_distance
-from nltk.tokenize import sent_tokenize
 import numpy as np
 import re
 import nltk
 import networkx as nx
 import sys
+import nltk
 
 
 def compute_similarity(sentence_1,sentence_2,stopwords=None):    
@@ -25,7 +22,7 @@ def compute_similarity(sentence_1,sentence_2,stopwords=None):
   for i in sentence_2:        
     if not i in stopwords:            
       b[words.index(i)] = 1+ b[words.index(i)]            
-  return 1-cosine_distance(a,b)   # computes coside distance between two vectors
+  return 1-nltk.cluster.util.cosine_distance(a,b)   # computes coside distance between two vectors
 
 def pairwise_similarity(sent,stop_words):
   #create an empty similarity matrix
@@ -45,14 +42,14 @@ list_of_sentences =[]
 top_n = 3
 if len(sys.argv)>2:
   top_n=sys.argv[2]
-list_of_sentences = sent_tokenize(text)    
+list_of_sentences = nltk.tokenize.sent_tokenize(text)    
 for sent in list_of_sentences:        
   sent.replace("[^a-zA-Z0-9]"," ")     #removes punctuations
 list_of_sentences
 
 nltk.download('stopwords')    
 nltk.download('punkt')
-stop_words = stopwords.words('english')               
+stop_words = nltk.corpus.stopwords.words('english')               
 sm = pairwise_similarity(list_of_sentences,stop_words)
 similarity_graph = nx.from_numpy_array(sm)
 scores = nx.pagerank(similarity_graph)
