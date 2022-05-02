@@ -20,4 +20,4 @@ where the text.txt contains sentences of the text document, all in one line and 
 ```
 pip3 install -r requirements.txt
 ```
-where the requirements.txt contains line seperates names of packages specified in point 2.
+where the requirements.txt contains line seperated names of packages specified in point 2.
