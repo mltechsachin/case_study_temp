@@ -16,6 +16,7 @@ Steps involved here are as follows
 5. The similarity matrix is then converted into a graph, with sentences as vertices and similarity scores as edges, for sentence rank calculation
 6. Given number of top-ranked sentences form the final summary
 
+Steps are eloborated with the code in the jupyter notebook
 ## Running the script
 ```
 python extractive_text_sm.py text.txt <num_sen>
